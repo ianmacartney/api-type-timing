@@ -5,11 +5,11 @@ export type MyComponentApi = ComponentApi<"myComponent">;
 
 export function useApi(api: MyComponentApi) {
   // Some function that uses the API type
-  return api.chunks.insert;
+  return api.apiKeys.destroy;
 }
 
 // Add more usage to ensure TS actually analyzes this
-export type ChunksApi = MyComponentApi["chunks"];
-export type InsertFunction = ChunksApi["insert"];
-export type InsertArgs = InsertFunction["_args"];
-export type InsertReturns = InsertFunction["_returnType"];
+export type ApiKeysApi = MyComponentApi["apiKeys"];
+export type DestroyFunction = ApiKeysApi["destroy"];
+export type DestroyArgs = DestroyFunction["_args"];
+export type DestroyReturns = DestroyFunction["_returnType"];

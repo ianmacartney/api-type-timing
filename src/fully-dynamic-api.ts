@@ -58,14 +58,14 @@ export type UseApi<API> = Expand<{
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  chunks: typeof import("./modules/chunks.js");
-  "embeddings/importance": typeof import("./modules/embeddings/importance.js");
-  "embeddings/index": typeof import("./modules/embeddings/index.js");
-  "embeddings/tables": typeof import("./modules/embeddings/tables.js");
-  entries: typeof import("./modules/entries.js");
-  filters: typeof import("./modules/filters.js");
-  namespaces: typeof import("./modules/namespaces.js");
-  search: typeof import("./modules/search.js");
+  apiKeys: typeof import("./agent/apiKeys.js");
+  files: typeof import("./agent/files.js");
+  messages: typeof import("./agent/messages.js");
+  streams: typeof import("./agent/streams.js");
+  threads: typeof import("./agent/threads.js");
+  users: typeof import("./agent/users.js");
+  "vector/index": typeof import("./agent/vector/index.js");
+  "vector/tables": typeof import("./agent/vector/tables.js");
 }>;
 // For now fullApiWithMounts is only fullApi which provides
 // jump-to-definition in component client code.
