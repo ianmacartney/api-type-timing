@@ -14,6 +14,7 @@
     "compare": "node compare.mjs"
   },
   "devDependencies": {
+    "convex": "^1.28.0",
     "typescript": "^5.7.2"
   }
 }
