@@ -1,4 +1,4 @@
-import type { ComponentApi } from "./unused-imports-api.js";
+import type { ComponentApi } from "./fully-dynamic-api.js";
 
 // Simulate using the imported type
 export type MyComponentApi = ComponentApi<"myComponent">;

@@ -23,6 +23,14 @@ const scenarios = {
     name: "Unused type imports",
     file: "src/unused-imports-consumer.ts",
   },
+  "fully-dynamic": {
+    name: "Fully dynamic API",
+    file: "src/fully-dynamic-consumer.ts",
+  },
+  "fully-static": {
+    name: "Fully static API",
+    file: "src/fully-static-consumer.ts",
+  },
 };
 
 const scenario = process.argv[2] || "baseline";
@@ -84,7 +92,9 @@ for (let i = 0; i < iterations; i++) {
   times.push(elapsed);
 
   if (diagnostics.length > 0) {
-    console.log(`Iteration ${i + 1}: ${elapsed.toFixed(2)}ms (${diagnostics.length} diagnostics)`);
+    console.log(
+      `Iteration ${i + 1}: ${elapsed.toFixed(2)}ms (${diagnostics.length} diagnostics)`
+    );
   } else {
     console.log(`Iteration ${i + 1}: ${elapsed.toFixed(2)}ms`);
   }

@@ -6,11 +6,13 @@
   "type": "module",
   "main": "index.ts",
   "scripts": {
-    "test": "npm run test:baseline && npm run test:type-imports && npm run test:dynamic-imports && npm run test:unused-imports && npm run compare",
+    "test": "npm run test:baseline && npm run test:type-imports && npm run test:dynamic-imports && npm run test:unused-imports && npm run test:fully-dynamic && npm run test:fully-static && npm run compare",
     "test:baseline": "node measure.mjs baseline",
     "test:type-imports": "node measure.mjs type-imports",
     "test:dynamic-imports": "node measure.mjs dynamic-imports",
     "test:unused-imports": "node measure.mjs unused-imports",
+    "test:fully-dynamic": "node measure.mjs fully-dynamic",
+    "test:fully-static": "node measure.mjs fully-static",
     "compare": "node compare.mjs"
   },
   "devDependencies": {
